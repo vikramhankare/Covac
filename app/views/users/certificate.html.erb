@@ -1,0 +1,43 @@
+<div class="container">
+
+    <hr>
+    <h1 class="display-4" ><strong>Certificate of Vaccination</strong></h1>
+    <hr>
+
+
+    <% if logged_in?%>
+
+        <div class="jumbotron" >
+        <% if current_user.noofvacc==1%>
+            <h2 class="display-4"><%= current_user.first_name %> is Partially Vaccinated.</h2>
+        <% end %>
+
+        <% if current_user.noofvacc==2%>
+            <h2 class="display-4"><%= current_user.first_name %> is Fully Vaccinated.</h2>
+        <% end %>
+
+        
+        
+        <strong>Username:</strong><%= current_user.username %></br>
+        <strong>First Name:</strong><%= current_user.first_name %> </br>
+            <strong>Last Name:</strong><%= current_user.last_name %> </br>
+            <strong>Gender:</strong><%= current_user.gender %> </br>
+            <strong>Vaccine Status:</strong><%= current_user.vaccine_status %> </br>
+            <strong>Aadhaar ID:</strong>                    <%= current_user.aadhaar %> </br>
+            <strong>Email ID: </strong>                     <%= current_user.email_id %> </br>
+            <strong>Phone Number: </strong>                 <%= current_user.phone_no %> </br>
+            <strong>Current Address:</strong>               <%= current_user.address %> </br>
+            <strong>Pin Code:</strong>                      <%= current_user.pin_code %> </br>
+            <strong>Number of Vaccine Doses Taken:</strong> <%= current_user.noofvacc %> </br>
+                                
+        
+        </div>
+    
+    <% end %>
+
+
+
+
+
+
+</div>

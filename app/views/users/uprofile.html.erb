@@ -1,0 +1,46 @@
+<div class="container">
+
+
+<h1 class="display-4" ><strong>User Profile</strong></h1>
+
+
+<% if logged_in?%>
+
+<div class="jumbotron" >
+  <h1 class="display-4">Hello, <%= current_user.first_name %></h1>
+  <p class="lead">Your Details entered during registration are listed here and same will be printed on the final certifiacte.</p>
+  <hr class="my-4">
+  <strong>Username:</strong><%= current_user.username %></br>
+   <strong>First Name:</strong><%= current_user.first_name %> </br>
+    <strong>Last Name:</strong><%= current_user.last_name %> </br>
+    <strong>Gender:</strong><%= current_user.gender %> </br>
+    <strong>Vaccine Status:</strong><%= current_user.vaccine_status %> </br>
+    <strong>Aadhaar ID:</strong>                    <%= current_user.aadhaar %> </br>
+    <strong>Email ID: </strong>                     <%= current_user.email_id %> </br>
+    <strong>Phone Number: </strong>                 <%= current_user.phone_no %> </br>
+    <strong>Current Address:</strong>               <%= current_user.address %> </br>
+    <strong>Pin Code:</strong>                      <%= current_user.pin_code %> </br>
+    <strong>Number of Vaccine Doses Taken:</strong> <%= current_user.noofvacc %> </br>
+                           
+  
+</div>
+
+
+
+    
+    
+    <%= link_to 'Download Certificate', certificate_path, class:"btn btn-danger", role:"button"%>
+    
+    
+
+
+
+    
+<% end %>
+
+
+
+
+
+
+</div>

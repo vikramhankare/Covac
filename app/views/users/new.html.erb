@@ -1,0 +1,79 @@
+<div class="container">
+
+
+<h1>Sign Up</h1>
+
+<%= form_with model: @user, local: true do |f| %>
+ 
+<div class="form-group">
+  <%= f.label :username %><br/>
+  <%= f.email_field :username, class: "form-control" %>
+</div>
+ 
+<div class="form-group">
+  <%= f.label :password %><br/>
+  <%= f.password_field :password, class: "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :first_name %><br/>
+  <%= f.text_field :first_name, class: "form-control" %>
+</div>
+<div class="form-group">
+  <%= f.label :last_name %><br/>
+  <%= f.text_field :last_name, class: "form-control" %>
+</div>
+<div class="form-group">
+  <%= f.label :gender %><br/>
+  <%= f.text_field :gender, class: "form-control" %>
+</div>
+
+
+<div class="form-group">
+  
+  <%= f.text_field :vaccine_status, class: "form-control", value: "Not Vaccinated", type:"hidden"%>
+</div>
+<div class="form-group">
+  <%= f.label :aadhaar %><br/>
+  <%= f.text_field :aadhaar, class: "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :email_id %><br/>
+  <%= f.text_field :email_id, class: "form-control" %>
+</div>
+<div class="form-group">
+  <%= f.label :phone_no %><br/>
+  <%= f.text_field :phone_no, class: "form-control" %>
+</div>
+<div class="form-group">
+  <%= f.label :address %><br/>
+  <%= f.text_field :address, class: "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :pin_code %><br/>
+  <%= f.text_field :pin_code, class: "form-control" %>
+</div>
+
+<div class="form-group">
+  
+  <%= f.text_field :noofvacc, class: "form-control", value: 0, type:"hidden"%>
+</div>
+
+<div class="form-group">
+  
+  <%= f.text_field :vcount, class: "form-control" , value: "0", type:"hidden"%>
+</div>
+
+
+ </br>
+<div class="form-group">
+  
+  <button class="btn btn-success" type="submit">Submit</button>
+</div>
+ 
+<% end %>
+
+</div>
+

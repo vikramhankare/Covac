@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Hospitals table (Admin access)</h1>
+
+
+<table class="table table-striped table-bordered table-hower">
+  <thead class="thead-dark">
+    <tr>
+      <th>Hospital ID</th>
+      <th>Hospital Name</th>
+      <th>Address</th>
+      <th>Phone no</th>
+      <th>Pin code</th>
+      <th>Free Vaccines Available</th>
+      <th>Paid Vaccines Available</th>
+    
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hosptals.each do |hosptal| %>
+      <tr>
+        <td><%= hosptal.hospital_id %></td>
+        <td><%= hosptal.hospital_name %></td>
+        <td><%= hosptal.address %></td>
+        <td><%= hosptal.phone_no %></td>
+        <td><%= hosptal.pin_code %></td>
+        <td><%= hosptal.free_vac %> &nbsp <a href="/minusonefree/<%= hosptal.id %>" class="btn btn-primary" role="button" % >Minus 1</a> &nbsp <a href="/minustenfree/<%= hosptal.id %>" class="btn btn-primary" role="button" % >Minus 10</a></td>
+        <td><%= hosptal.paid_vac %> &nbsp <a href="/minusonepaid/<%= hosptal.id %>" class="btn btn-primary" role="button" % >Minus 1</a> &nbsp <a href="/minustenpaid/<%= hosptal.id %>" class="btn btn-primary" role="button" % >Minus 10</a></td>
+        
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>

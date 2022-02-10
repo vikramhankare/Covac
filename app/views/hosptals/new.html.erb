@@ -1,0 +1,54 @@
+<div class="container">
+
+
+<h1>New Hopital Registration</h1>
+
+<%= form_with(model: @hosptal, local: true) do |f| %>
+
+ 
+ 
+<div class="form-group">
+  <%= f.label :HospitalID %><br/>
+  <%= f.text_field :hospital_id, class: "form-control" %>
+</div>
+ 
+
+<div class="form-group">
+  <%= f.label :hospital_name %><br/>
+  <%= f.text_field :hospital_name, class: "form-control" %>
+</div>
+<div class="form-group">
+  <%= f.label :address %><br/>
+  <%= f.text_field :address, class: "form-control" %>
+</div>
+<div class="form-group">
+  <%= f.label :phone_no %><br/>
+  <%= f.text_field :phone_no, class: "form-control" %>
+</div>
+<div class="form-group">
+  <%= f.label :pin_code %><br/>
+  <%= f.text_field :pin_code, class: "form-control" %>
+</div>
+<div class="form-group">
+  <%= f.label :free_vac %><br/>
+  <%= f.text_field :free_vac, class: "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :paid_vac %><br/>
+  <%= f.text_field :paid_vac, class: "form-control" %>
+</div>
+
+
+
+  </br>
+<div class="form-group">
+  
+  <button class="btn btn-success" type="submit">Submit</button>
+</div>
+ 
+<% end %>
+
+
+</div>
+

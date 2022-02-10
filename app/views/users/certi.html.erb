@@ -1,0 +1,24 @@
+<h1>User Certificate</h1>
+
+
+<% if logged_in?%>
+    <h2> <%= current_user.username %> is logged in. </h2>
+    <h2> <%= current_user.first_name %> </h2>
+    <h2> <%= current_user.last_name %> </h2>
+    <h2> <%= current_user.gender %> </h2>
+    <h2> <%= current_user.vaccine_status %> </h2>
+    <h2> <%= current_user.aadhaar %> </h2>
+    <h2> <%= current_user.email_id %> </h2>
+    <h2> <%= current_user.phone_no %> </h2>
+    <h2> <%= current_user.address %> </h2>
+    <h2> <%= current_user.pin_code %> </h2>
+    <h2> <%= current_user.noofvacc %> </h2>
+    <h2> <%= current_user.vcount %> </h2>
+   
+    
+    
+
+
+
+    
+<% end %>
